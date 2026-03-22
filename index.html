@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brandon Poole</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 13px;
+    }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background: #ffffff;
+      color: #000000;
+      line-height: 1.45;
+    }
+
+    /* ─── LAYOUT ─── */
+
+    .page {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 100vh;
+    }
+
+    /* ─── LEFT COLUMN ─── */
+
+    .left {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2.8rem 2.4rem 2.8rem 2.8rem;
+    }
+
+    .bio {
+      max-width: 400px;
+    }
+
+    .bio p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .bio strong {
+      font-weight: bold;
+    }
+
+    .bio a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    .bio a:hover {
+      text-decoration: none;
+    }
+
+    /* ─── RIGHT COLUMN ─── */
+
+    .right {
+      border-left: none;
+    }
+
+    /* ─── PROJECT BLOCK ─── */
+
+    .project {
+      margin-bottom: 0;
+    }
+
+    .project-images {
+      display: block;
+    }
+
+    .project-images img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      /* placeholder appearance before real images are added */
+      background: #e8e8e8;
+      min-height: 200px;
+    }
+
+    /* Placeholder image boxes shown when src is empty */
+    .project-images img[src=""] {
+      display: none;
+    }
+
+    .project-images .img-placeholder {
+      width: 100%;
+      background: #e8e8e8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-family: 'Times New Roman', serif;
+      font-size: 0.85rem;
+      font-style: italic;
+    }
+
+    .project-meta {
+      padding: 1.5rem 2rem 2.5rem 2rem;
+    }
+
+    .project-title {
+      font-style: italic;
+      font-weight: normal;
+      font-size: 1rem;
+      display: inline;
+    }
+
+    .project-year {
+      font-style: normal;
+      font-size: 1rem;
+    }
+
+    .project-medium {
+      font-size: 1rem;
+      margin-top: 0.1rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .project-description {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 0.9rem;
+      max-width: 520px;
+    }
+
+    .project-description p + p {
+      margin-top: 0.7rem;
+    }
+
+    .project-extra {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 0.9rem;
+      max-width: 520px;
+    }
+
+    .project-screenings-label {
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .project-screenings {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .project-produced {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .divider {
+      padding: 0 2rem 1.5rem 2rem;
+      color: #000;
+      font-size: 1rem;
+    }
+
+    .essay-link a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    /* ─── RESPONSIVE ─── */
+
+    @media (max-width: 800px) {
+      .page {
+        grid-template-columns: 1fr;
+      }
+
+      .left {
+        position: relative;
+        height: auto;
+        padding: 2rem 1.6rem;
+      }
+
+      .project-meta {
+        padding: 1.2rem 1.6rem 2rem 1.6rem;
+      }
+
+      .divider {
+        padding: 0 1.6rem 1.2rem 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ─── LEFT: BIO ─── -->
+  <div class="left">
+    <div class="bio">
+      <p>
+        <strong>Brandon Poole</strong> is an artist, filmmaker, architectural designer, and PhD Candidate at McGill University's School of Architecture, where he is a Vadasz Scholar and SSHRC Doctoral Fellow. With a background in journalism and philosophy, his practice and research examines the entwined histories and speculative futures of architecture, simulation, and the image, while his films document the folkloric and vernacular constructions of place. He holds a Master of Visual Studies from the University of Toronto and a Bachelor of Fine Arts (Honours, with Distinction) from the University of Victoria. His work has been exhibited at Dazibao (Montreal), the Toronto Biennial, the Art Museum (University of Toronto), Polygon Gallery&nbsp; (Vancouver), and Deluge Contemporary Art (Victoria, BC). His films have screened at EXiS (Seoul), Mimesis (US), non_syntax (Tokyo/Taipei), Antimatter (Victoria), Suspaustus Laikas (Vilnius), and Iowa City Docs, among others. He is a Lecturer in the Visual Arts department at the University of Victoria. For more information, please <a href="mailto:brandonpoole@example.com">contact</a>.
+      </p>
+    </div>
+  </div>
+
+  <!-- ─── RIGHT: PROJECTS ─── -->
+  <div class="right">
+
+    <!-- ════ PROJECT: Unless the Eye Catch Fire ════ -->
+    <div class="project">
+      <div class="project-images">
+        <!--
+          IMAGES: Replace the src="" values below with your actual image filenames.
+          Once you've uploaded your images to the /images/ folder in your GitHub repo,
+          change src="" to src="images/your-filename.jpg"
+
+          Example:
+            <img src="images/unless-eye-01.jpg" alt="Unless the Eye Catch Fire">
+
+          Add or remove <img> tags to match the number of images for this project.
+        -->
+        <img src="" alt="Unless the Eye Catch Fire — image 1">
+        <img src="" alt="Unless the Eye Catch Fire — image 2">
+        <img src="" alt="Unless the Eye Catch Fire — image 3">
+        <img src="" alt="Unless the Eye Catch Fire — image 4">
+      </div>
+      <div class="project-meta">
+        <div>
+          <span class="project-title">Unless the Eye Catch Fire</span><span class="project-year">, 2025</span>
+        </div>
+        <div class="project-medium">13:50min, 4K with sound</div>
+        <div class="project-description">
+          <p>On October 24th, 2018, in Belliveau Cove, Nova Scotia, an eagle fell from the sky into the back of a man's pickup truck. Within a week, the man, his dog, and the eagle all died. Returning to the sites of the events, the deaths are diffracted through the memories of the man's sister, over the well in the basement of their family home, and between the pine-slatted walls of the eagle rehabilitation centre.</p>
+        </div>
+        <div class="project-produced">Produced by Julian Dime</div>
+        <div class="project-screenings-label">Screenings:</div>
+        <div class="project-screenings">
+          Iowa City Docs, (US) 2025<br>
+          Mimesis Documentary Festival, (US) 2025<br>
+          East_East Festival; non_Syntax (Tokyo/Taipei) 2025<br>
+          ULTRAcinema (Mexico) 2025<br>
+          Ermitage_308 (Montreal) 2026<br>
+          IMAGES (Toronto) 2026
+        </div>
+      </div>
+    </div>
+
+    <div class="divider">--</div>
+
+    <!-- ════ PROJECT: and beneath these clouds ════ -->
+    <div class="project">
+      <div class="project-images">
+        <!--
+          Replace src="" with your actual image paths.
+          Example: src="images/beneath-clouds-01.jpg"
+        -->
+        <img src="" alt="and beneath these clouds — image 1">
+        <img src="" alt="and beneath these clouds — image 2">
+        <img src="" alt="and beneath these clouds — image 3">
+        <img src="" alt="and beneath these clouds — image 4">
+      </div>
+      <div class="project-meta">
+        <div>
+          <span class="project-title">and beneath these clouds</span><span class="project-year">, 2023</span>
+        </div>
+        <div class="project-medium">Solo Exhibition @ Dazibao (Montreal)</div>
+        <div class="project-description">
+          <p>On October 30th, 2014, at the Wichita Mid-Continent Airport in Kansas, U.S., a Beechcraft King Air B200 lost power to its left engine shortly after take-off, crashing through the roof of the FlightSafety International Citation Learning Center and colliding with a flight simulator inside. Searching the punctiform event for its significance, the exhibition presents the causal indeterminacy at the story's core as enigmatic exemplar; condensing, minutely, the accident's forensic and informational excess with a desire for immersion, narrative, and meaning.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider">--</div>
+
+    <!-- ════ PROJECT: One through the other ════ -->
+    <div class="project">
+      <div class="project-images">
+        <!--
+          Replace src="" with your actual image paths.
+          Example: src="images/one-through-01.jpg"
+        -->
+        <img src="" alt="One through the other — image 1">
+        <img src="" alt="One through the other — image 2">
+      </div>
+      <div class="project-meta">
+        <div>
+          <span class="project-title">One through the other</span><span class="project-year">, 2022</span> + <span class="essay-link"><a href="#">Essay by Kate Whiteway</a></span>
+        </div>
+        <div class="project-medium">Solo Exhibition, San Sheng Art Space (Toronto)</div>
+        <div class="project-description">
+          <p>The horizontally inverted image of an instagram influencer holding a 2009 Mark Lewis Venice Biennale catalogue is set opposite an essentialized replica of the catalogue, similarly inverted, resting against a mirror.</p>
+          <p>The work was shown as the inaugural site specific exhibition for a hybrid luxury fashion showroom/art gallery. The instagram image was sourced from San Sheng's promotional campaign.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider">--</div>
+
+    <!-- ════ PROJECT: Islands ════ -->
+    <div class="project">
+      <div class="project-images">
+        <!--
+          Replace src="" with your actual image paths.
+          Example: src="images/islands-01.jpg"
+        -->
+        <img src="" alt="Islands — image 1">
+        <img src="" alt="Islands — image 2">
+        <img src="" alt="Islands — image 3">
+      </div>
+      <div class="project-meta">
+        <div>
+          <span class="project-title">Islands</span><span class="project-year">, 2022</span> + <span class="essay-link"><a href="#">Catalogue Essay by Nadim Samman &amp; Dehlia Hannah</a></span>
+        </div>
+        <div class="project-medium">16mm film + HD Video + Kinetic Sculpture + Plinth + Stools</div>
+        <div class="project-description">
+          <p>"Infinitely changeable, full of evanescent marble-patterned gradations, varying in every ripple, the fineness of its composition an everlasting joy to the eye. Let us try and analyze it."<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minnaert, M., Light and Colour in the Open Air (1954)</p>
+        </div>
+        <div class="project-extra">
+          <p>From the astronomer Marcel Minnaert's popular 1950s text on meteorological optics, we find an intimacy of description evidence an aesthetic of scientific inquiry. Indeed, Minnaert's empirical poetics would be cited by the computer scientist Dr. Nelson Max as an important technical reference in the creation of his 1981 Carla's Island, widely considered the first computer-generated animation of water. Ray traced by a supercomputer at a nuclear weapons research laboratory during a summer of anti-nuclear weapons protests, Carla's Island would go on to influence the representation of liquid in fluid-mechanics, military simulations, cinema, and video games; floating—in its algorithmic attempt at verisimilitude—the promise of a simulated world to inhabit and control.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider">--</div>
+
+    <!-- ════ PROJECT: Cygnus ════ -->
+    <div class="project">
+      <div class="project-images">
+        <!--
+          Replace src="" with your actual image paths.
+          Example: src="images/cygnus-01.jpg"
+        -->
+        <img src="" alt="Cygnus — image 1">
+      </div>
+      <div class="project-meta">
+        <div>
+          <span class="project-title">Cygnus</span><span class="project-year">, 2022</span>
+        </div>
+        <div class="project-medium">6:22 min 4k video with sound</div>
+        <div class="project-description">
+          <p>A networked planet; an improvised signal; the last swan. Filmed on the northern shores of Lake Ontario, amid the ruined utopic architecture of Ontario Place, Cygnus takes the geodesic-domed Cinesphere (the first permanent installation of IMAX), a sunken lake freighter turned breakwater, and an invasive mute swan as subjects of its tripartite cosmic zoom.</p>
+        </div>
+        <div class="project-produced">Collected and Distributed by VTape (2023)</div>
+        <div class="project-screenings-label">Screenings:</div>
+        <div class="project-screenings">
+          Suspaustus Laikus, (Vilnius Lithuania) 2023<br>
+          Brussels Independent Film Festival (Belgium) 2023<br>
+          Ghent International Short Film Festival, Belgium) 2023<br>
+          Deluge Contemporary Art (Victoria BC) 2022<br>
+          non-syntax Experimental Image Festival (Taiwan) 2022
+        </div>
+      </div>
+    </div>
+
+    <div class="divider">--</div>
+
+    <!-- ════ ADD MORE PROJECTS BELOW ════ -->
+    <!--
+      To add another project, copy the block below and fill in the details:
+
+      <div class="project">
+        <div class="project-images">
+          <img src="images/your-image.jpg" alt="Project title">
+        </div>
+        <div class="project-meta">
+          <div>
+            <span class="project-title">Project Title</span><span class="project-year">, YEAR</span>
+          </div>
+          <div class="project-medium">Medium / Exhibition info</div>
+          <div class="project-description">
+            <p>Description text here.</p>
+          </div>
+          <div class="project-screenings-label">Screenings:</div>
+          <div class="project-screenings">
+            Festival, City Year
+          </div>
+        </div>
+      </div>
+
+      <div class="divider">--</div>
+    -->
+
+  </div><!-- /right -->
+</div><!-- /page -->
+
+</body>
+</html>
