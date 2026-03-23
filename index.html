@@ -22,15 +22,11 @@
       line-height: 1.45;
     }
 
-    /* ─── LAYOUT ─── */
-
     .page {
       display: grid;
       grid-template-columns: 1fr 1fr;
       min-height: 100vh;
     }
-
-    /* ─── LEFT COLUMN ─── */
 
     .left {
       position: sticky;
@@ -62,13 +58,9 @@
       text-decoration: none;
     }
 
-    /* ─── RIGHT COLUMN ─── */
-
     .right {
       border-left: none;
     }
-
-    /* ─── PROJECT BLOCK ─── */
 
     .project {
       margin-bottom: 0;
@@ -83,26 +75,12 @@
       width: 100%;
       height: auto;
       object-fit: cover;
-      /* placeholder appearance before real images are added */
       background: #e8e8e8;
       min-height: 200px;
     }
 
-    /* Placeholder image boxes shown when src is empty */
     .project-images img[src=""] {
       display: none;
-    }
-
-    .project-images .img-placeholder {
-      width: 100%;
-      background: #e8e8e8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #999;
-      font-family: 'Times New Roman', serif;
-      font-size: 0.85rem;
-      font-style: italic;
     }
 
     .project-meta {
@@ -145,11 +123,6 @@
       max-width: 520px;
     }
 
-    .project-screenings-label {
-      font-size: 1rem;
-      margin-bottom: 0.2rem;
-    }
-
     .project-screenings {
       font-size: 1rem;
       line-height: 1.6;
@@ -170,8 +143,6 @@
       color: inherit;
       text-decoration: underline;
     }
-
-    /* ─── RESPONSIVE ─── */
 
     @media (max-width: 800px) {
       .page {
@@ -198,31 +169,19 @@
 
 <div class="page">
 
-  <!-- ─── LEFT: BIO ─── -->
   <div class="left">
     <div class="bio">
       <p>
-        <strong>Brandon Poole</strong> is an artist, filmmaker, architectural designer, and PhD Candidate at McGill University's School of Architecture, where he is a Vadasz Scholar and SSHRC Doctoral Fellow. With a background in journalism and philosophy, his practice and research examines the entwined histories and speculative futures of architecture, simulation, and the image, while his films document the folkloric and vernacular constructions of place. He holds a Master of Visual Studies from the University of Toronto and a Bachelor of Fine Arts (Honours, with Distinction) from the University of Victoria. His work has been exhibited at Dazibao (Montreal), the Toronto Biennial, the Art Museum (University of Toronto), Polygon Gallery&nbsp; (Vancouver), and Deluge Contemporary Art (Victoria, BC). His films have screened at EXiS (Seoul), Mimesis (US), non_syntax (Tokyo/Taipei), Antimatter (Victoria), Suspaustus Laikas (Vilnius), and Iowa City Docs, among others. He is a Lecturer in the Visual Arts department at the University of Victoria. For more information, please <a href="mailto:brandonpoole@example.com">contact</a>.
+        <strong>Brandon Poole</strong> is an artist, filmmaker, architectural designer, and PhD Candidate at McGill University's School of Architecture, where he is a Vadasz Scholar and SSHRC Doctoral Fellow. With a background in journalism and philosophy, his practice and research examines the entwined histories and speculative futures of architecture, simulation, and the image, while his films document the folkloric and vernacular constructions of place. He holds a Master of Visual Studies from the University of Toronto and a Bachelor of Fine Arts (Honours, with Distinction) from the University of Victoria. His work has been exhibited at Dazibao (Montreal), the Toronto Biennial, the Art Museum (University of Toronto), Polygon Gallery (Vancouver), and Deluge Contemporary Art (Victoria, BC). His films have screened at EXiS (Seoul), Mimesis (US), non_syntax (Tokyo/Taipei), Antimatter (Victoria), Suspaustus Laikas (Vilnius), and Iowa City Docs, among others. He is a Lecturer in the Visual Arts department at the University of Victoria. For more information, please <a href="mailto:brandonpoole@example.com">contact</a>.
       </p>
     </div>
   </div>
 
-  <!-- ─── RIGHT: PROJECTS ─── -->
   <div class="right">
 
-    <!-- ════ PROJECT: Unless the Eye Catch Fire ════ -->
+    <!-- ════ Unless the Eye Catch Fire ════ -->
     <div class="project">
       <div class="project-images">
-        <!--
-          IMAGES: Replace the src="" values below with your actual image filenames.
-          Once you've uploaded your images to the /images/ folder in your GitHub repo,
-          change src="" to src="images/your-filename.jpg"
-
-          Example:
-            <img src="images/unless-eye-01.jpg" alt="Unless the Eye Catch Fire">
-
-          Add or remove <img> tags to match the number of images for this project.
-        -->
         <img src="" alt="Unless the Eye Catch Fire — image 1">
         <img src="" alt="Unless the Eye Catch Fire — image 2">
         <img src="" alt="Unless the Eye Catch Fire — image 3">
@@ -237,11 +196,11 @@
           <p>On October 24th, 2018, in Belliveau Cove, Nova Scotia, an eagle fell from the sky into the back of a man's pickup truck. Within a week, the man, his dog, and the eagle all died. Returning to the sites of the events, the deaths are diffracted through the memories of the man's sister, over the well in the basement of their family home, and between the pine-slatted walls of the eagle rehabilitation centre.</p>
         </div>
         <div class="project-produced">Produced by Julian Dime</div>
-        <div class="project-screenings-label">Screenings:</div>
         <div class="project-screenings">
-          Iowa City Docs, (US) 2025<br>
-          Mimesis Documentary Festival, (US) 2025<br>
-          East_East Festival; non_Syntax (Tokyo/Taipei) 2025<br>
+          Screenings:<br>
+          Iowa City Docs (US) 2025<br>
+          Mimesis Documentary Festival (US) 2025<br>
+          East_East Festival; non_syntax (Tokyo/Taipei) 2025<br>
           ULTRAcinema (Mexico) 2025<br>
           Ermitage_308 (Montreal) 2026<br>
           IMAGES (Toronto) 2026
@@ -251,13 +210,9 @@
 
     <div class="divider">--</div>
 
-    <!-- ════ PROJECT: and beneath these clouds ════ -->
+    <!-- ════ and beneath these clouds ════ -->
     <div class="project">
       <div class="project-images">
-        <!--
-          Replace src="" with your actual image paths.
-          Example: src="images/beneath-clouds-01.jpg"
-        -->
         <img src="" alt="and beneath these clouds — image 1">
         <img src="" alt="and beneath these clouds — image 2">
         <img src="" alt="and beneath these clouds — image 3">
@@ -276,13 +231,9 @@
 
     <div class="divider">--</div>
 
-    <!-- ════ PROJECT: One through the other ════ -->
+    <!-- ════ One through the other ════ -->
     <div class="project">
       <div class="project-images">
-        <!--
-          Replace src="" with your actual image paths.
-          Example: src="images/one-through-01.jpg"
-        -->
         <img src="" alt="One through the other — image 1">
         <img src="" alt="One through the other — image 2">
       </div>
@@ -300,13 +251,9 @@
 
     <div class="divider">--</div>
 
-    <!-- ════ PROJECT: Islands ════ -->
+    <!-- ════ Islands ════ -->
     <div class="project">
       <div class="project-images">
-        <!--
-          Replace src="" with your actual image paths.
-          Example: src="images/islands-01.jpg"
-        -->
         <img src="" alt="Islands — image 1">
         <img src="" alt="Islands — image 2">
         <img src="" alt="Islands — image 3">
@@ -328,13 +275,9 @@
 
     <div class="divider">--</div>
 
-    <!-- ════ PROJECT: Cygnus ════ -->
+    <!-- ════ Cygnus ════ -->
     <div class="project">
       <div class="project-images">
-        <!--
-          Replace src="" with your actual image paths.
-          Example: src="images/cygnus-01.jpg"
-        -->
         <img src="" alt="Cygnus — image 1">
       </div>
       <div class="project-meta">
@@ -346,22 +289,21 @@
           <p>A networked planet; an improvised signal; the last swan. Filmed on the northern shores of Lake Ontario, amid the ruined utopic architecture of Ontario Place, Cygnus takes the geodesic-domed Cinesphere (the first permanent installation of IMAX), a sunken lake freighter turned breakwater, and an invasive mute swan as subjects of its tripartite cosmic zoom.</p>
         </div>
         <div class="project-produced">Collected and Distributed by VTape (2023)</div>
-        <div class="project-screenings-label">Screenings:</div>
         <div class="project-screenings">
-          Suspaustus Laikus, (Vilnius Lithuania) 2023<br>
+          Screenings:<br>
+          Suspaustus Laikas (Vilnius, Lithuania) 2023<br>
           Brussels Independent Film Festival (Belgium) 2023<br>
-          Ghent International Short Film Festival, Belgium) 2023<br>
-          Deluge Contemporary Art (Victoria BC) 2022<br>
-          non-syntax Experimental Image Festival (Taiwan) 2022
+          Ghent International Short Film Festival (Belgium) 2023<br>
+          Deluge Contemporary Art (Victoria, BC) 2022<br>
+          non_syntax Experimental Image Festival (Taiwan) 2022
         </div>
       </div>
     </div>
 
-    <div class="divider">--</div>
+    <!-- ════ ADD MORE PROJECTS BELOW ════
+      Copy this block for each new project. Place a <div class="divider">- -</div> before it.
 
-    <!-- ════ ADD MORE PROJECTS BELOW ════ -->
-    <!--
-      To add another project, copy the block below and fill in the details:
+      <div class="divider">--</div>
 
       <div class="project">
         <div class="project-images">
@@ -373,20 +315,19 @@
           </div>
           <div class="project-medium">Medium / Exhibition info</div>
           <div class="project-description">
-            <p>Description text here.</p>
+            <p>Description.</p>
           </div>
-          <div class="project-screenings-label">Screenings:</div>
+          <div class="project-produced">Produced by Name</div>
           <div class="project-screenings">
-            Festival, City Year
+            Screenings:<br>
+            Festival Name (City, Country) Year
           </div>
         </div>
       </div>
+    ════ -->
 
-      <div class="divider">--</div>
-    -->
-
-  </div><!-- /right -->
-</div><!-- /page -->
+  </div>
+</div>
 
 </body>
 </html>
