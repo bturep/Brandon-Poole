@@ -12,9 +12,8 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Brandon Poole">
-  <meta property="og:description" content="Artist, filmmaker,and PhD Candidate, McGill University School of Architecture.">
-  <meta property="og:image" content="https://brandonpoole.net/images/og-image.jpg">
-  <!-- UPDATE og:image above with a real 1200x630px image once uploaded to /images/ -->
+  <meta property="og:description" content="Artist, filmmaker, and PhD Candidate, McGill University School of Architecture.">
+  <meta property="og:image" content="https://brandonpoole.net/assets/images/og-image.jpg">
   <meta property="og:url" content="https://brandonpoole.net">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Brandon Poole">
@@ -23,16 +22,14 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Brandon Poole">
   <meta name="twitter:description" content="Artist, filmmaker, and PhD Candidate, McGill University School of Architecture.">
-  <meta name="twitter:image" content="https://brandonpoole.net/images/og-image.jpg">
-  <!-- UPDATE twitter:image above with same image as og:image -->
+  <meta name="twitter:image" content="https://brandonpoole.net/assets/images/og-image.jpg">
 
   <!-- Favicon -->
   <link rel="icon" href="assets/favicon/favicon.ico">
-<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
-<link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-<link rel="manifest" href="assets/favicon/site.webmanifest">
-  <!-- Generate favicon files at https://realfavicongenerator.net and upload to repo root -->
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
 
   <style>
     *, *::before, *::after {
@@ -52,11 +49,17 @@
       line-height: 1.45;
     }
 
+    /* ─── LAYOUT ─── */
+
     .page {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 380px 1fr;
       min-height: 100vh;
+      max-width: 1400px;
+      margin: 0 auto;
     }
+
+    /* ─── LEFT COLUMN ─── */
 
     .left {
       position: sticky;
@@ -67,7 +70,7 @@
     }
 
     .bio {
-      max-width: 400px;
+      max-width: 340px;
     }
 
     .bio p {
@@ -88,9 +91,13 @@
       text-decoration: none;
     }
 
+    /* ─── RIGHT COLUMN ─── */
+
     .right {
-      border-left: none;
+      min-width: 0; /* prevents grid blowout */
     }
+
+    /* ─── PROJECT BLOCK ─── */
 
     .project {
       margin-bottom: 0;
@@ -98,15 +105,16 @@
 
     .project-images {
       display: block;
+      width: 100%;
+      overflow: hidden;
     }
 
     .project-images img {
       display: block;
       width: 100%;
       height: auto;
+      max-width: 100%;
       object-fit: cover;
-      background: #e8e8e8;
-      min-height: 200px;
     }
 
     .project-images img[src=""] {
@@ -155,14 +163,15 @@
 
     .project-screenings {
       font-size: 1rem;
-      line-height: 1;
+      line-height: 1.6;
+      margin-bottom: 0.9rem;
     }
 
     .project-exhibitions {
       font-size: 1rem;
-      line-height: 1;
+      line-height: 1.6;
+      margin-bottom: 0.9rem;
     }
-
 
     .project-produced {
       font-size: 1rem;
@@ -180,6 +189,8 @@
       text-decoration: underline;
     }
 
+    /* ─── RESPONSIVE ─── */
+
     @media (max-width: 800px) {
       .page {
         grid-template-columns: 1fr;
@@ -189,6 +200,10 @@
         position: relative;
         height: auto;
         padding: 2rem 1.6rem;
+      }
+
+      .bio {
+        max-width: 100%;
       }
 
       .project-meta {
@@ -220,7 +235,6 @@
     <!-- ════ Unless the Eye Catch Fire ════ -->
     <div class="project">
       <div class="project-images">
-        <!-- UPDATE: replace src="" with src="images/filename.jpg" after uploading images -->
         <img src="assets/images/Web_UtECF01.jpg" alt="Unless the Eye Catch Fire — image 1">
         <img src="assets/images/Web_UtECF02.jpg" alt="Unless the Eye Catch Fire — image 2">
         <img src="assets/images/Web_UtECF03.jpg" alt="Unless the Eye Catch Fire — image 3">
@@ -238,12 +252,12 @@
         <div class="project-produced">Produced by Julian Dime</div>
         <div class="project-screenings">
           Screenings:<br>
-          2026  IMAGES (Toronto)<br>
-          2026  Ermitage_308 (Montreal)<br>
-          2025  Iowa City Docs (US) 2025<br>
-          2025  Mimesis Documentary Festival (US) 2025<br>
-          2025  East_East Festival; non_syntax (Tokyo/Taipei) 2025<br>
-          2025  ULTRAcinema (Mexico) 2025
+          2026&nbsp;&nbsp;IMAGES (Toronto)<br>
+          2026&nbsp;&nbsp;Ermitage_308 (Montreal)<br>
+          2025&nbsp;&nbsp;Iowa City Docs (US)<br>
+          2025&nbsp;&nbsp;Mimesis Documentary Festival (US)<br>
+          2025&nbsp;&nbsp;East_East Festival; non_syntax (Tokyo/Taipei)<br>
+          2025&nbsp;&nbsp;ULTRAcinema (Mexico)
         </div>
       </div>
     </div>
@@ -253,7 +267,6 @@
     <!-- ════ and beneath these clouds ════ -->
     <div class="project">
       <div class="project-images">
-        <!-- UPDATE: replace src="" with src="images/filename.jpg" after uploading images -->
         <img src="" alt="and beneath these clouds — image 1">
         <img src="" alt="and beneath these clouds — image 2">
         <img src="" alt="and beneath these clouds — image 3">
@@ -275,14 +288,12 @@
     <!-- ════ One through the other ════ -->
     <div class="project">
       <div class="project-images">
-        <!-- UPDATE: replace src="" with src="images/filename.jpg" after uploading images -->
         <img src="" alt="One through the other — image 1">
         <img src="" alt="One through the other — image 2">
       </div>
       <div class="project-meta">
         <div>
           <span class="project-title">One through the other</span><span class="project-year">, 2022</span> + <span class="essay-link"><a href="essays/whiteway.pdf">Essay by Kate Whiteway</a></span>
-          <!-- UPDATE: replace essays/whiteway.pdf with actual path once uploaded -->
         </div>
         <div class="project-medium">Solo Exhibition, San Sheng Art Space (Toronto)</div>
         <div class="project-description">
@@ -297,7 +308,6 @@
     <!-- ════ Islands ════ -->
     <div class="project">
       <div class="project-images">
-        <!-- UPDATE: replace src="" with src="images/filename.jpg" after uploading images -->
         <img src="" alt="Islands — image 1">
         <img src="" alt="Islands — image 2">
         <img src="" alt="Islands — image 3">
@@ -305,7 +315,6 @@
       <div class="project-meta">
         <div>
           <span class="project-title">Islands</span><span class="project-year">, 2022</span> + <span class="essay-link"><a href="essays/samman-hannah.pdf">Catalogue Essay by Nadim Samman &amp; Dehlia Hannah</a></span>
-          <!-- UPDATE: replace essays/samman-hannah.pdf with actual path once uploaded -->
         </div>
         <div class="project-medium">16mm film + HD Video + Kinetic Sculpture + Plinth + Stools</div>
         <div class="project-description">
@@ -317,10 +326,9 @@
         </div>
         <div class="project-exhibitions">
           Exhibitions:<br>
-          2022  Islands, Deluge Contemporary Art,  Victoria BC.
-
-          2020  Blind Pilotage, University of Toronto Art Museum, Toronto ON.
-      </div>
+          2022&nbsp;&nbsp;Islands, Deluge Contemporary Art, Victoria BC<br>
+          2020&nbsp;&nbsp;Blind Pilotage, University of Toronto Art Museum, Toronto ON
+        </div>
       </div>
     </div>
 
@@ -329,7 +337,6 @@
     <!-- ════ Cygnus ════ -->
     <div class="project">
       <div class="project-images">
-        <!-- UPDATE: replace src="" with src="images/filename.jpg" after uploading images -->
         <img src="" alt="Cygnus — image 1">
       </div>
       <div class="project-meta">
@@ -343,12 +350,13 @@
         <div class="project-produced">Collected and Distributed by VTape (2023)</div>
         <div class="project-screenings">
           Screenings:<br>
-          2023  Suspaustus Laikas (Vilnius, Lithuania)<br>
-          2023  Brussels Independent Film Festival (Belgium)<br>
-          2023  Ghent International Short Film Festival (Belgium)<br>
-          2022  Deluge Contemporary Art (Victoria, BC)<br>
-          2022  non_syntax Experimental Image Festival (Taiwan)
+          2023&nbsp;&nbsp;Suspaustus Laikas (Vilnius, Lithuania)<br>
+          2023&nbsp;&nbsp;Brussels Independent Film Festival (Belgium)<br>
+          2023&nbsp;&nbsp;Ghent International Short Film Festival (Belgium)<br>
+          2022&nbsp;&nbsp;Deluge Contemporary Art (Victoria, BC)<br>
+          2022&nbsp;&nbsp;non_syntax Experimental Image Festival (Taiwan)
         </div>
+      </div>
     </div>
 
     <!-- ════ ADD MORE PROJECTS BELOW ════
@@ -358,7 +366,7 @@
 
       <div class="project">
         <div class="project-images">
-          <img src="images/your-image.jpg" alt="Project title">
+          <img src="assets/images/your-image.jpg" alt="Project title">
         </div>
         <div class="project-meta">
           <div>
@@ -371,7 +379,7 @@
           <div class="project-produced">Produced by Name</div>
           <div class="project-screenings">
             Screenings:<br>
-            Festival Name (City, Country) Year
+            YEAR&nbsp;&nbsp;Festival Name (City, Country)
           </div>
         </div>
       </div>
