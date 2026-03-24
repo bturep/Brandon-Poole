@@ -95,18 +95,14 @@
 
     .right {
       min-width: 0;
-    }
-
-    .right .project,
-    .right .divider {
-      max-width: 700px;
+      padding: 2.8rem 2.8rem 2.8rem 0;
     }
 
     /* ─── PROJECT BLOCK ─── */
 
     .project {
       margin-bottom: 0;
-      padding: 0;
+      max-width: 600px;
     }
 
     .project-images {
@@ -119,7 +115,6 @@
       display: block;
       width: 100%;
       height: auto;
-      max-width: 100%;
       max-height: 90vh;
       object-fit: cover;
     }
@@ -186,7 +181,8 @@
     }
 
     .divider {
-      padding: 0 2rem 1.5rem 2rem;
+      padding: 0 0 1.5rem 0;
+      max-width: 600px;
       color: #000;
       font-size: 1rem;
     }
@@ -213,12 +209,17 @@
         max-width: 100%;
       }
 
-      .project-meta {
-        padding: 1.2rem 1.6rem 2rem 1.6rem;
+      .right {
+        padding: 0 1.6rem 2rem 1.6rem;
+      }
+
+      .project {
+        max-width: 100%;
       }
 
       .divider {
-        padding: 0 1.6rem 1.2rem 1.6rem;
+        max-width: 100%;
+        padding: 0 0 1.2rem 0;
       }
     }
   </style>
