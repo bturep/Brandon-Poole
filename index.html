@@ -31,6 +31,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
   <link rel="manifest" href="assets/favicon/site.webmanifest">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap" rel="stylesheet">
+
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -43,10 +47,10 @@
     }
 
     body {
-      font-family: 'Times New Roman', Times, serif;
+      font-family: 'DM Sans', sans-serif;
       background: #ffffff;
       color: #000000;
-      line-height: 1.45;
+      line-height: 1.2;
     }
 
     /* ─── LAYOUT ─── */
@@ -75,7 +79,7 @@
 
     .bio p {
       font-size: 1rem;
-      line-height: 1.5;
+      line-height: 1.2;
     }
 
     .bio strong {
@@ -108,14 +112,12 @@
     .project-images {
       display: block;
       width: 100%;
-      overflow: hidden;
     }
 
     .project-images img {
       display: block;
       width: 100%;
       height: auto;
-      max-height: 90vh;
       object-fit: cover;
     }
 
@@ -129,25 +131,28 @@
 
     .project-title {
       font-style: italic;
-      font-weight: normal;
-      font-size: 1rem;
+      font-weight: 400;
+      font-size: 0.8rem;
+      line-height: 1.2;
       display: inline;
     }
 
     .project-year {
       font-style: normal;
-      font-size: 1rem;
+      font-size: 0.8rem;
+      line-height: 1.2;
     }
 
     .project-medium {
-      font-size: 1rem;
+      font-size: 0.8rem;
+      line-height: 1.2;
       margin-top: 0.1rem;
       margin-bottom: 0.9rem;
     }
 
     .project-description {
-      font-size: 1rem;
-      line-height: 1.5;
+      font-size: 0.8rem;
+      line-height: 1.2;
       margin-bottom: 0.9rem;
       max-width: 520px;
     }
@@ -157,26 +162,27 @@
     }
 
     .project-extra {
-      font-size: 1rem;
-      line-height: 1.5;
+      font-size: 0.8rem;
+      line-height: 1.2;
       margin-bottom: 0.9rem;
       max-width: 520px;
     }
 
     .project-screenings {
-      font-size: 1rem;
+      font-size: 0.8rem;
       line-height: 1.6;
       margin-bottom: 0.9rem;
     }
 
     .project-exhibitions {
-      font-size: 1rem;
+      font-size: 0.8rem;
       line-height: 1.6;
       margin-bottom: 0.9rem;
     }
 
     .project-produced {
-      font-size: 1rem;
+      font-size: 0.8rem;
+      line-height: 1.2;
       margin-bottom: 0.5rem;
     }
 
@@ -184,7 +190,7 @@
       padding: 0 0 1.5rem 0;
       max-width: 600px;
       color: #000;
-      font-size: 1rem;
+      font-size: 0.8rem;
     }
 
     .essay-link a {
