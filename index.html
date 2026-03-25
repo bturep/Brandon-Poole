@@ -99,10 +99,9 @@
     /* ─── LINK PREVIEW ─── */
 
     #link-preview {
-      position: absolute;
-      bottom: 1rem;
-      left: 1rem;
-      width: calc(520px - 2rem);
+      position: relative;
+      margin-top: 1.5rem;
+      width: 100%;
       max-width: 400px;
       opacity: 0;
       transition: opacity 0.15s ease;
@@ -115,7 +114,7 @@
       height: auto;
       max-height: 600px;
       object-fit: contain;
-      object-position: left bottom;
+      object-position: left top;
     }
 
     #link-preview.visible {
@@ -382,12 +381,11 @@
         </div>
         <div class="project-screenings">
           Screenings:<br>
-          2026&nbsp;&nbsp;<a href="https://imagesfestival.com/events/feral-vision" target="_blank" rel="noopener noreferrer">IMAGES</a> (Toronto)<br>
+          2026&nbsp;&nbsp;<a href="https://imagesfestival.com/events/feral-vision" target="_blank" rel="noopener noreferrer" data-preview="assets/posters/2026_IMAGES-Poster.png">IMAGES</a> (Toronto)<br>
           2026&nbsp;&nbsp;<a href="https://www.ermitage308.com/past/un-quart-de-siecle" target="_blank" rel="noopener noreferrer" data-preview="assets/posters/2026_Ermitage-Program.jpeg">Ermitage_308</a> (Montreal)<br>
           2025&nbsp;&nbsp;Iowa City Docs (US)<br>
-          2025&nbsp;&nbsp;<a href="https://www.mimesisfestival.org/2025-program" target="_blank" rel="noopener noreferrer">Mimesis Documentary Festival</a> (US)<br>
-          2025&nbsp;&nbsp;<a href="https://easteast.org/2025/exhibitors/artists/1342/" target="_blank" rel="noopener noreferrer">East_East Festival; non_syntax</a> (Tokyo/Taipei)<br>
-          2025&nbsp;&nbsp;ULTRAcinema (Mexico)
+          2025&nbsp;&nbsp;<a href="https://www.mimesisfestival.org/2025-program" target="_blank" rel="noopener noreferrer" data-preview="assets/posters/2025_Mimesis-Poster1.png">Mimesis Documentary Festival</a> (US)<br>
+          2025&nbsp;&nbsp;<a href="https://easteast.org/2025/exhibitors/artists/1342/" target="_blank" rel="noopener noreferrer" data-preview="assets/posters/2025_EastEast-Poster.jpeg">East_East Festival; non_syntax</a> (Tokyo/Taipei)<br>
         </div>
       </div>
     </div>
@@ -517,7 +515,7 @@
           </div>
           <div class="project-screenings">
             Screenings:<br>
-            YEAR&nbsp;&nbsp;<a href="url" target="_blank" rel="noopener noreferrer" data-preview="assets/images/previews/poster.jpg">Festival Name</a> (City, Country)
+            YEAR&nbsp;&nbsp;<a href="url" target="_blank" rel="noopener noreferrer" data-preview="assets/posters/poster.jpg">Festival Name</a> (City, Country)
           </div>
         </div>
       </div>
