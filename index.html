@@ -130,6 +130,7 @@
       width: 100%;
       height: auto;
       object-fit: cover;
+      cursor: crosshair;
     }
 
     .project-images img[src=""] {
@@ -231,6 +232,47 @@
       margin-bottom: 0.9rem;
     }
 
+    /* ─── LIGHTBOX ─── */
+
+    #lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.92);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #lightbox-img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+    }
+
+    .lb-btn {
+      position: fixed;
+      background: none;
+      border: none;
+      color: #ffffff;
+      font-size: 1.5rem;
+      cursor: crosshair;
+      padding: 1rem;
+      opacity: 0.7;
+      transition: opacity 0.15s;
+    }
+
+    .lb-btn:hover {
+      opacity: 1;
+    }
+
+    #lb-prev { left: 1.5rem; top: 50%; transform: translateY(-50%); }
+    #lb-next { right: 1.5rem; top: 50%; transform: translateY(-50%); }
+    #lb-close { top: 1.5rem; right: 1.5rem; font-size: 1.2rem; }
+
     /* ─── RESPONSIVE ─── */
 
     @media (max-width: 800px) {
@@ -260,6 +302,9 @@
         max-width: 100%;
         padding: 0 0 0.2rem 0;
       }
+
+      #lb-prev { left: 0.5rem; }
+      #lb-next { right: 0.5rem; }
     }
   </style>
 </head>
@@ -303,11 +348,11 @@
         <div class="project-screenings">
           Screenings:<br>
           2026&nbsp;&nbsp;<a href="https://imagesfestival.com/events/feral-vision" target="_blank" rel="noopener noreferrer">IMAGES</a> (Toronto)<br>
-          2026&nbsp;&nbsp;<a href="https://www.ermitage308.com/past/un-quart-de-siecle" target="_blank" rel="noopener noreferrer">Ermitage, Un quart de siècle</a> (Montreal)<br>
-          2025&nbsp;&nbsp;<a href="https://icdocs.wordpress.com/icdocs-2025/" target="_blank" rel="noopener noreferrer">Iowa City Docs</a> (US)<br>
+          2026&nbsp;&nbsp;<a href="https://www.ermitage308.com/past/un-quart-de-siecle" target="_blank" rel="noopener noreferrer">Ermitage_308</a> (Montreal)<br>
+          2025&nbsp;&nbsp;Iowa City Docs (US)<br>
           2025&nbsp;&nbsp;<a href="https://www.mimesisfestival.org/2025-program" target="_blank" rel="noopener noreferrer">Mimesis Documentary Festival</a> (US)<br>
-          2025&nbsp;&nbsp;<a href="https://easteast.org/2025/exhibitors/artists/1342/" target="_blank" rel="noopener noreferrer">East_East Festival; non_syntax</a> (Tokyo/Taipei)
-
+          2025&nbsp;&nbsp;<a href="https://easteast.org/2025/exhibitors/artists/1342/" target="_blank" rel="noopener noreferrer">East_East Festival; non_syntax</a> (Tokyo/Taipei)<br>
+          2025&nbsp;&nbsp;ULTRAcinema (Mexico)
         </div>
       </div>
     </div>
@@ -445,6 +490,68 @@
 
   </div>
 </div>
+
+<!-- ─── LIGHTBOX ─── -->
+<div id="lightbox">
+  <img id="lightbox-img" alt="">
+  <button class="lb-btn" id="lb-prev">&#8592;</button>
+  <button class="lb-btn" id="lb-next">&#8594;</button>
+  <button class="lb-btn" id="lb-close">&#10005;</button>
+</div>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightbox-img');
+  let currentImages = [];
+  let currentIndex = 0;
+
+  function openLightbox(images, index) {
+    currentImages = images;
+    currentIndex = index;
+    lbImg.src = images[index];
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    lbImg.src = currentImages[currentIndex];
+  }
+
+  function showNext() {
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    lbImg.src = currentImages[currentIndex];
+  }
+
+  // Attach click handlers to all project images
+  document.querySelectorAll('.project').forEach(project => {
+    const imgs = Array.from(project.querySelectorAll('.project-images img'))
+      .filter(img => img.getAttribute('src') && img.getAttribute('src') !== '');
+    imgs.forEach((img, i) => {
+      img.addEventListener('click', () => openLightbox(imgs.map(im => im.src), i));
+    });
+  });
+
+  document.getElementById('lb-prev').addEventListener('click', e => { e.stopPropagation(); showPrev(); });
+  document.getElementById('lb-next').addEventListener('click', e => { e.stopPropagation(); showNext(); });
+  document.getElementById('lb-close').addEventListener('click', closeLightbox);
+
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (lightbox.style.display === 'none') return;
+    if (e.key === 'ArrowLeft') showPrev();
+    if (e.key === 'ArrowRight') showNext();
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
 
 </body>
 </html>
