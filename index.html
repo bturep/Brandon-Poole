@@ -7,13 +7,12 @@
   <title>Brandon Poole</title>
   <meta name="description" content="Brandon Poole — artist, filmmaker, and PhD Candidate at McGill University's School of Architecture. Vadasz Scholar and SSHRC Doctoral Fellow.">
   <meta name="author" content="Brandon Poole">
-  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://brandonpoole.net">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Brandon Poole">
   <meta property="og:description" content="Artist, filmmaker, and PhD Candidate, McGill University School of Architecture.">
-  <meta property="og:image" content="assets/images/NamePlate.jpg">
+  <meta property="og:image" content="https://brandonpoole.net/assets/images/NamePlate.jpg">
   <meta property="og:url" content="https://brandonpoole.net">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Brandon Poole">
@@ -22,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Brandon Poole">
   <meta name="twitter:description" content="Artist, filmmaker, and PhD Candidate, McGill University School of Architecture.">
-  <meta name="twitter:image" content="assets/images/NamePlate.jpg">
+  <meta name="twitter:image" content="https://brandonpoole.net/assets/images/NamePlate.jpg">
 
   <!-- Favicon -->
   <link rel="icon" href="assets/favicon/favicon.ico">
@@ -30,6 +29,64 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
   <link rel="manifest" href="assets/favicon/site.webmanifest">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://brandonpoole.net/#website",
+        "url": "https://brandonpoole.net",
+        "name": "Brandon Poole"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://brandonpoole.net/#person",
+        "name": "Brandon Poole",
+        "url": "https://brandonpoole.net",
+        "image": "https://brandonpoole.net/assets/images/NamePlate.jpg",
+        "email": "brandon@turepoole.work",
+        "jobTitle": [
+          "Artist",
+          "Filmmaker",
+          "Architectural Designer",
+          "PhD Candidate",
+          "Lecturer"
+        ],
+        "description": "Artist, filmmaker, and architectural designer. PhD Candidate at McGill University's School of Architecture, Vadasz Scholar and SSHRC Doctoral Fellow. Lecturer in Visual Arts at the University of Victoria.",
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "McGill University, School of Architecture",
+            "url": "https://www.mcgill.ca/architecture/"
+          },
+          {
+            "@type": "Organization",
+            "name": "University of Victoria, Department of Visual Arts",
+            "url": "https://www.uvic.ca/finearts/visual-arts/"
+          }
+        ],
+        "alumniOf": [
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Toronto",
+            "url": "https://www.utoronto.ca"
+          },
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Victoria",
+            "url": "https://www.uvic.ca"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Preload first visible image -->
+  <link rel="preload" as="image" href="assets/images/Web_UtECF01.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,7 +136,6 @@
 
     .bio p {
       font-size: 1rem;
-      line-height: 1.2;
     }
 
     .bio strong {
@@ -93,7 +149,7 @@
 
     .bio a:hover {
       text-decoration: none;
-      cursor: crosshair;
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Ccircle cx='5' cy='5' r='4' fill='%23000000'/%3E%3C/svg%3E") 5 5, auto;
     }
 
     /* ─── LINK PREVIEW ─── */
@@ -135,7 +191,7 @@
 
     .right a:hover {
       text-decoration: none;
-      cursor: crosshair;
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Ccircle cx='5' cy='5' r='4' fill='%23000000'/%3E%3C/svg%3E") 5 5, auto;
     }
 
     /* ─── PROJECT BLOCK ─── */
@@ -155,7 +211,7 @@
       width: 100%;
       height: auto;
       object-fit: cover;
-      cursor: crosshair;
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Ccircle cx='5' cy='5' r='4' fill='%23000000'/%3E%3C/svg%3E") 5 5, auto;
     }
 
     .project-images img[src=""] {
@@ -168,7 +224,6 @@
 
     .project-meta > div:first-child {
       font-size: 1rem;
-      line-height: 1.2;
       margin-bottom: 0.1rem;
     }
 
@@ -176,26 +231,22 @@
       font-style: italic;
       font-weight: bold;
       font-size: 1rem;
-      line-height: 1.2;
       display: inline;
     }
 
     .project-year {
       font-style: normal;
       font-size: 1rem;
-      line-height: 1.2;
     }
 
     .project-medium {
       font-size: 1rem;
-      line-height: 1.2;
       margin-top: 0.1rem;
       margin-bottom: 0.2rem;
     }
 
     .project-description {
       font-size: 1rem;
-      line-height: 1.2;
       margin-top: 0.7rem;
       margin-bottom: 0.9rem;
       max-width: 520px;
@@ -207,7 +258,6 @@
 
     .project-extra {
       font-size: 1rem;
-      line-height: 1.2;
       margin-bottom: 0.9rem;
       max-width: 520px;
     }
@@ -216,7 +266,6 @@
 
     .project-works {
       font-size: 1rem;
-      line-height: 1.2;
       margin-top: 0.5rem;
       margin-bottom: 0.9rem;
       max-width: 520px;
@@ -244,7 +293,6 @@
 
     .project-essay {
       font-size: 1rem;
-      line-height: 1.2;
       margin-top: 0.5rem;
       margin-bottom: 0.9rem;
     }
@@ -274,7 +322,6 @@
     .divider {
       padding: 0 0 1.5rem 0;
       max-width: 600px;
-      color: #000;
       font-size: 1rem;
     }
 
@@ -319,7 +366,7 @@
       border: none;
       color: #ffffff;
       font-size: 1.5rem;
-      cursor: crosshair;
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Ccircle cx='5' cy='5' r='4' fill='%23ffffff'/%3E%3C/svg%3E") 5 5, auto;
       padding: 1rem;
       opacity: 0.7;
       transition: opacity 0.15s;
@@ -396,11 +443,11 @@
     <!-- ════ Unless the Eye Catch Fire ════ -->
     <div class="project">
       <div class="project-images">
-        <img src="assets/images/Web_UtECF01.jpg" alt="Unless the Eye Catch Fire — image 1">
-        <img src="assets/images/Web_UtECF02.jpg" alt="Unless the Eye Catch Fire — image 2">
-        <img src="assets/images/Web_UtECF03.jpg" alt="Unless the Eye Catch Fire — image 3">
-        <img src="assets/images/Web_UtECF04.jpg" alt="Unless the Eye Catch Fire — image 4">
-        <img src="assets/images/Web_UtECF05.jpg" alt="Unless the Eye Catch Fire — image 5">
+        <img src="assets/images/Web_UtECF01.jpg" alt="Unless the Eye Catch Fire — image 1" width="3000" height="1687" loading="eager">
+        <img src="assets/images/Web_UtECF02.jpg" alt="Unless the Eye Catch Fire — image 2" width="3000" height="1687" loading="lazy">
+        <img src="assets/images/Web_UtECF03.jpg" alt="Unless the Eye Catch Fire — image 3" width="3000" height="1687" loading="lazy">
+        <img src="assets/images/Web_UtECF04.jpg" alt="Unless the Eye Catch Fire — image 4" width="3000" height="1687" loading="lazy">
+        <img src="assets/images/Web_UtECF05.jpg" alt="Unless the Eye Catch Fire — image 5" width="3000" height="1688" loading="lazy">
       </div>
       <div class="project-meta">
         <div>
@@ -430,11 +477,11 @@
     <!-- ════ and beneath these clouds ════ -->
     <div class="project">
       <div class="project-images">
-        <img src="assets/images/abtc5.jpg" alt="and beneath these clouds — image 1">
-        <img src="assets/images/abtc3.jpg" alt="and beneath these clouds — image 2">
-        <img src="assets/images/abtc6.jpg" alt="and beneath these clouds — image 3">
-        <img src="assets/images/abtc7.jpg" alt="and beneath these clouds — image 4">
-        <img src="assets/images/abtc1.jpg" alt="and beneath these clouds — image 5">
+        <img src="assets/images/abtc5.jpg" alt="and beneath these clouds — image 1" width="2500" height="1667" loading="lazy">
+        <img src="assets/images/abtc3.jpg" alt="and beneath these clouds — image 2" width="2667" height="1778" loading="lazy">
+        <img src="assets/images/abtc6.jpg" alt="and beneath these clouds — image 3" width="2667" height="1778" loading="lazy">
+        <img src="assets/images/abtc7.jpg" alt="and beneath these clouds — image 4" width="3430" height="2395" loading="lazy">
+        <img src="assets/images/abtc1.jpg" alt="and beneath these clouds — image 5" width="4000" height="2667" loading="lazy">
       </div>
       <div class="project-meta">
         <div>
@@ -480,9 +527,9 @@
     <!-- ════ One through the other ════ -->
     <div class="project">
       <div class="project-images">
-        <img src="assets/images/otto2.jpg" alt="One through the other — image 1">
-        <img src="assets/images/otto1.jpg" alt="One through the other — image 2">
-        <img src="assets/images/otto7.jpg" alt="One through the other — image 3">
+        <img src="assets/images/otto2.jpg" alt="One through the other — image 1" width="1165" height="777" loading="lazy">
+        <img src="assets/images/otto1.jpg" alt="One through the other — image 2" width="1688" height="1611" loading="lazy">
+        <img src="assets/images/otto7.jpg" alt="One through the other — image 3" width="1981" height="1321" loading="lazy">
       </div>
       <div class="project-meta">
         <div>
@@ -521,12 +568,12 @@
     <!-- ════ Islands ════ -->
     <div class="project">
       <div class="project-images">
-        <img src="assets/images/islands2.jpg" alt="Islands — image 1">
-        <img src="assets/images/islands3.jpg" alt="Islands — image 2">
-        <img src="assets/images/islands4.jpg" alt="Islands — image 3">
-        <img src="assets/images/islands5.jpg" alt="Islands — image 4">
-        <img src="assets/images/islands6.jpg" alt="Islands — image 5">
-        <img src="assets/images/islands7.jpeg" alt="Islands — image 6">
+        <img src="assets/images/islands2.jpg" alt="Islands — image 1" width="2000" height="1362" loading="lazy">
+        <img src="assets/images/islands3.jpg" alt="Islands — image 2" width="1871" height="1333" loading="lazy">
+        <img src="assets/images/islands4.jpg" alt="Islands — image 3" width="8256" height="5504" loading="lazy">
+        <img src="assets/images/islands5.jpg" alt="Islands — image 4" width="1920" height="1280" loading="lazy">
+        <img src="assets/images/islands6.jpg" alt="Islands — image 5" width="1920" height="1280" loading="lazy">
+        <img src="assets/images/islands7.jpeg" alt="Islands — image 6" width="6960" height="4640" loading="lazy">
       </div>
       <div class="project-meta">
         <div>
@@ -561,7 +608,7 @@
         </div>
         <div class="project-essay">
           <div class="essay-label">Essay:</div>
-          <div><span class="essay-title">Blind Pilotage</span> — <a href="documents/samman-hannah.pdf" target="_blank" rel="noopener noreferrer">Nadim Samman &amp; Dehlia Hannah</a></div>
+          <div><span class="essay-title">Blind Pilotage</span> — <a href="assets/documents/samman-hannah.pdf" target="_blank" rel="noopener noreferrer">Nadim Samman &amp; Dehlia Hannah</a></div>
         </div>
         <div class="project-exhibitions">
           <strong>Exhibitions:</strong><br>
@@ -581,9 +628,9 @@
     <!-- ════ Cygnus ════ -->
     <div class="project">
       <div class="project-images">
-        <img src="assets/images/cygnus1.jpg" alt="Cygnus — image 1">
-        <img src="assets/images/cygnus2.jpg" alt="Cygnus — image 2">
-        <img src="assets/images/cygnus3.jpg" alt="Cygnus — image 3">
+        <img src="assets/images/cygnus1.jpg" alt="Cygnus — image 1" width="3088" height="2160" loading="lazy">
+        <img src="assets/images/cygnus2.jpg" alt="Cygnus — image 2" width="3088" height="2160" loading="lazy">
+        <img src="assets/images/cygnus3.jpg" alt="Cygnus — image 3" width="3088" height="2160" loading="lazy">
       </div>
       <div class="project-meta">
         <div>
@@ -614,7 +661,7 @@
 
       <div class="project">
         <div class="project-images">
-          <img src="assets/images/your-image.jpg" alt="Project title">
+          <img src="assets/images/your-image.jpg" alt="Project title" width="W" height="H" loading="lazy">
         </div>
         <div class="project-meta">
           <div>
@@ -657,64 +704,89 @@
 </div>
 
 <!-- ─── LIGHTBOX ─── -->
-<div id="lightbox">
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
   <img id="lightbox-img" alt="">
-  <button class="lb-btn" id="lb-prev">&#8592;</button>
-  <button class="lb-btn" id="lb-next">&#8594;</button>
-  <button class="lb-btn" id="lb-close">&#10005;</button>
+  <button class="lb-btn" id="lb-prev" aria-label="Previous image">&#8592;</button>
+  <button class="lb-btn" id="lb-next" aria-label="Next image">&#8594;</button>
+  <button class="lb-btn" id="lb-close" aria-label="Close">&#10005;</button>
 </div>
 
 <script>
   // ─── LIGHTBOX ───
   const lightbox = document.getElementById('lightbox');
   const lbImg = document.getElementById('lightbox-img');
+  const lbPrev = document.getElementById('lb-prev');
+  const lbNext = document.getElementById('lb-next');
+  const lbClose = document.getElementById('lb-close');
+  const lbFocusable = [lbPrev, lbNext, lbClose];
   let currentImages = [];
+  let currentAlts = [];
   let currentIndex = 0;
+  let lastFocused = null;
 
-  function openLightbox(images, index) {
+  function openLightbox(images, alts, index) {
     currentImages = images;
+    currentAlts = alts;
     currentIndex = index;
     lbImg.src = images[index];
+    lbImg.alt = alts[index];
+    lastFocused = document.activeElement;
     lightbox.style.display = 'flex';
     document.body.style.overflow = 'hidden';
+    lbClose.focus();
   }
 
   function closeLightbox() {
     lightbox.style.display = 'none';
     document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
   }
 
   function showPrev() {
     currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
     lbImg.src = currentImages[currentIndex];
+    lbImg.alt = currentAlts[currentIndex];
   }
 
   function showNext() {
     currentIndex = (currentIndex + 1) % currentImages.length;
     lbImg.src = currentImages[currentIndex];
+    lbImg.alt = currentAlts[currentIndex];
   }
 
   document.querySelectorAll('.project').forEach(project => {
     const imgs = Array.from(project.querySelectorAll('.project-images img'))
       .filter(img => img.getAttribute('src') && img.getAttribute('src') !== '');
     imgs.forEach((img, i) => {
-      img.addEventListener('click', () => openLightbox(imgs.map(im => im.src), i));
+      img.addEventListener('click', () => openLightbox(
+        imgs.map(im => im.src),
+        imgs.map(im => im.alt),
+        i
+      ));
     });
   });
 
-  document.getElementById('lb-prev').addEventListener('click', e => { e.stopPropagation(); showPrev(); });
-  document.getElementById('lb-next').addEventListener('click', e => { e.stopPropagation(); showNext(); });
-  document.getElementById('lb-close').addEventListener('click', closeLightbox);
+  lbPrev.addEventListener('click', e => { e.stopPropagation(); showPrev(); });
+  lbNext.addEventListener('click', e => { e.stopPropagation(); showNext(); });
+  lbClose.addEventListener('click', closeLightbox);
 
   lightbox.addEventListener('click', e => {
     if (e.target === lightbox) closeLightbox();
   });
 
   document.addEventListener('keydown', e => {
-    if (lightbox.style.display === 'none') return;
+    if (lightbox.style.display !== 'flex') return;
     if (e.key === 'ArrowLeft') showPrev();
     if (e.key === 'ArrowRight') showNext();
     if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'Tab') {
+      e.preventDefault();
+      const current = lbFocusable.indexOf(document.activeElement);
+      const next = e.shiftKey
+        ? (current - 1 + lbFocusable.length) % lbFocusable.length
+        : (current + 1) % lbFocusable.length;
+      lbFocusable[next].focus();
+    }
   });
 
   // ─── LINK PREVIEW ───
