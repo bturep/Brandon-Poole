@@ -96,6 +96,32 @@
       cursor: crosshair;
     }
 
+    /* ─── LINK PREVIEW ─── */
+
+    #link-preview {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      width: calc(520px - 2rem);
+      max-width: 400px;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+      pointer-events: none;
+    }
+
+    #link-preview img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: contain;
+      object-position: left bottom;
+    }
+
+    #link-preview.visible {
+      opacity: 1;
+    }
+
     /* ─── RIGHT COLUMN ─── */
 
     .right {
@@ -290,6 +316,10 @@
         max-width: 100%;
       }
 
+      #link-preview {
+        display: none;
+      }
+
       .right {
         padding: 0 1rem 1.5rem 1rem;
       }
@@ -319,6 +349,11 @@
         <strong>Brandon Poole</strong> is an artist, filmmaker, and PhD Candidate at McGill University's School of Architecture, where he is a Vadasz Scholar and SSHRC Doctoral Fellow. With a background in journalism and philosophy, his practice and research examines the entwined histories and speculative futures of architecture, simulation, and the image, while his films document the folkloric and vernacular constructions of place. He holds a Master of Visual Studies from the University of Toronto and a Bachelor of Fine Arts (Honours, with Distinction) from the University of Victoria. His work has been exhibited at Dazibao (Montreal), the Toronto Biennial, the Art Museum (University of Toronto), Polygon Gallery (Vancouver), and Deluge Contemporary Art (Victoria, BC). His films have screened at EXiS (Seoul), Mimesis (US), non_syntax (Tokyo/Taipei), Antimatter (Victoria), Suspaustus Laikas (Vilnius), and Iowa City Docs, among others. He is a Lecturer in the Visual Arts department at the University of Victoria. For more information, please <a href="mailto:brandon@turepoole.work">contact</a>.
       </p>
     </div>
+
+    <!-- Preview image shown on link hover -->
+    <div id="link-preview">
+      <img id="preview-img" src="" alt="">
+    </div>
   </div>
 
   <!-- ─── RIGHT: PROJECTS ─── -->
@@ -347,7 +382,7 @@
         </div>
         <div class="project-screenings">
           Screenings:<br>
-          2026&nbsp;&nbsp;<a href="https://imagesfestival.com/events/feral-vision" target="_blank" rel="noopener noreferrer">IMAGES</a> (Toronto)<br>
+          2026&nbsp;&nbsp;<a href="https://imagesfestival.com/events/feral-vision" target="_blank" rel="noopener noreferrer" data-preview="assets/images/previews/images-festival-2026.jpg">IMAGES</a> (Toronto)<br>
           2026&nbsp;&nbsp;<a href="https://www.ermitage308.com/past/un-quart-de-siecle" target="_blank" rel="noopener noreferrer">Ermitage_308</a> (Montreal)<br>
           2025&nbsp;&nbsp;Iowa City Docs (US)<br>
           2025&nbsp;&nbsp;<a href="https://www.mimesisfestival.org/2025-program" target="_blank" rel="noopener noreferrer">Mimesis Documentary Festival</a> (US)<br>
@@ -482,7 +517,7 @@
           </div>
           <div class="project-screenings">
             Screenings:<br>
-            YEAR&nbsp;&nbsp;Festival Name (City, Country)
+            YEAR&nbsp;&nbsp;<a href="url" target="_blank" rel="noopener noreferrer" data-preview="assets/images/previews/poster.jpg">Festival Name</a> (City, Country)
           </div>
         </div>
       </div>
@@ -500,6 +535,7 @@
 </div>
 
 <script>
+  // ─── LIGHTBOX ───
   const lightbox = document.getElementById('lightbox');
   const lbImg = document.getElementById('lightbox-img');
   let currentImages = [];
@@ -528,7 +564,6 @@
     lbImg.src = currentImages[currentIndex];
   }
 
-  // Attach click handlers to all project images
   document.querySelectorAll('.project').forEach(project => {
     const imgs = Array.from(project.querySelectorAll('.project-images img'))
       .filter(img => img.getAttribute('src') && img.getAttribute('src') !== '');
@@ -550,6 +585,21 @@
     if (e.key === 'ArrowLeft') showPrev();
     if (e.key === 'ArrowRight') showNext();
     if (e.key === 'Escape') closeLightbox();
+  });
+
+  // ─── LINK PREVIEW ───
+  const previewBox = document.getElementById('link-preview');
+  const previewImg = document.getElementById('preview-img');
+
+  document.querySelectorAll('a[data-preview]').forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      const src = link.getAttribute('data-preview');
+      previewImg.src = src;
+      previewBox.classList.add('visible');
+    });
+    link.addEventListener('mouseleave', () => {
+      previewBox.classList.remove('visible');
+    });
   });
 </script>
 
