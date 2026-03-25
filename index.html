@@ -30,6 +30,61 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
   <link rel="manifest" href="assets/favicon/site.webmanifest">
 
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://brandonpoole.net/#website",
+        "url": "https://brandonpoole.net",
+        "name": "Brandon Poole"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://brandonpoole.net/#person",
+        "name": "Brandon Poole",
+        "url": "https://brandonpoole.net",
+        "image": "https://brandonpoole.net/assets/images/NamePlate.jpg",
+        "email": "brandon@turepoole.work",
+        "jobTitle": [
+          "Artist",
+          "Filmmaker",
+          "Architectural Designer",
+          "PhD Candidate",
+          "Lecturer"
+        ],
+        "description": "Artist, filmmaker, and architectural designer. PhD Candidate at McGill University's School of Architecture, Vadasz Scholar and SSHRC Doctoral Fellow. Lecturer in Visual Arts at the University of Victoria.",
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "McGill University, School of Architecture",
+            "url": "https://www.mcgill.ca/architecture/"
+          },
+          {
+            "@type": "Organization",
+            "name": "University of Victoria, Department of Visual Arts",
+            "url": "https://www.uvic.ca/finearts/visual-arts/"
+          }
+        ],
+        "alumniOf": [
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Toronto",
+            "url": "https://www.utoronto.ca"
+          },
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Victoria",
+            "url": "https://www.uvic.ca"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <!-- Preload first visible image -->
   <link rel="preload" as="image" href="assets/images/Web_UtECF01.jpg">
 
