@@ -796,8 +796,10 @@
   document.querySelectorAll('a[data-preview]').forEach(link => {
     link.addEventListener('mouseenter', () => {
       const src = link.getAttribute('data-preview');
+      previewBox.classList.remove('visible');
+      previewImg.onload = () => previewBox.classList.add('visible');
       previewImg.src = src;
-      previewBox.classList.add('visible');
+      if (previewImg.complete) previewBox.classList.add('visible');
     });
     link.addEventListener('mouseleave', () => {
       previewBox.classList.remove('visible');
