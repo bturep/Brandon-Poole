@@ -60,3 +60,11 @@ Append an entry after every major task. Never delete entries.
 
 - Created this CLAUDE.md as persistent session memory.
 - Repo moved from `~/Documents/GitHub/Brandon-Poole` to `~/Projects/Brandon-Poole` — remote (bturep/Brandon-Poole) unchanged.
+
+### 2026-10-27 -- ULTRAcinema screening added; CV-format screening list
+
+- Compiled a date-ordered list of all screenings/exhibitions from `index.html`, then reformatted it CV-style after annavasof.net/about (year-first bullets, solo shows in quotes, film named in brackets). Not added to the site; kept in chat.
+- Added `2025 ULTRAcinema (Mexico City)` to the Unless the Eye Catch Fire screenings, plain text, no link (Brandon: "no links").
+- Verified details from the festival's program card: ULTRAcinema XIV, Selección Oficial, Programa 5 "Ontología orientada a los objetos / Onismos" (73 min, 5 films), Museo Casa de Carranza (INAH, Río Lerma 35, Col. Cuauhtémoc, CDMX), Tue 21 Oct 2025, 14:00. Program billed the film as Canadá-2024, 14 min (site says 2025, 13:50). FilmFreeway's 18 Oct date is the festival opening, not the screening.
+- Corrections along the way: city first guessed as Guadalajara (wrong); a La Lumière Collective poster briefly linked was for ULTRAcinema's Montreal tour of Mexican films, not this screening -- removed.
+- Open: bio names Toronto Biennial, Polygon Gallery and Antimatter with no dated entries; spelling inconsistencies EXIS/EXiS and non_syntax.
