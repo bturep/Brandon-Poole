@@ -1,2 +1,6 @@
 .claude/
 assets/originals/
+
+# Project memory stays local (public repo)
+CLAUDE.md
+.claude/
